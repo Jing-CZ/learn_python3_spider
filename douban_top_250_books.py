@@ -40,6 +40,7 @@ def save_to_excel(soup):
         item_score = item.find(class_='rating_num').string
         item_author = item.find('p').text
         if item.find(class_='inq') is not None:
+            global item_intr
             item_intr = item.find(class_='inq').string        
 
         # print('爬取电影：' + item_index + ' | ' + item_name +' | ' + item_img +' | ' + item_score +' | ' + item_author +' | ' + item_intr )
